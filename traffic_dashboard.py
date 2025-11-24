@@ -8,12 +8,8 @@ import sys
 import importlib
 
 # Ensure openpyxl is installed
-try:
-    import openpyxl
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
-    importlib.invalidate_caches()
-    openpyxl = importlib.import_module("openpyxl")
+import openpyxl
+
 
 # Import ML libraries
 from sklearn.model_selection import train_test_split
